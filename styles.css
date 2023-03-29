@@ -1,0 +1,29 @@
+.map {
+    width: 1300px;
+    height: 900px;
+    background-color: #333;
+}
+
+[class*="copyrights-pane"] {
+    display: none !important;
+}
+
+.my-custom-icon__image {
+    background-image: url('imgs/img.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 70px;
+    height: 70px;
+    border-radius: 50%; /* Задаем радиус скругления равным половине ширины и высоты элемента */
+}
+
+#box {
+    width: 100px;
+    height: 100px;
+    background-color: red;
+
+    display: none;
+    position: absolute;
+    left: 10%;
+    top: 10%;
+}
