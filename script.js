@@ -3,7 +3,7 @@ let center = [55.883589, 37.621490];
 let park_sveta = [55.887294, 37.595885];
 
 function init() {
-    let map = new ymaps.Map('map-test', {
+    let map = new ymaps.Map('map', {
         center: center,
         zoom: 13
     });
