@@ -35,6 +35,7 @@ body {
 }
 .field {
     width: 100%;
+    height: 95vh;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -63,6 +64,8 @@ body {
     text-align: justify-all;
     padding: 2%;
     color: white;
+
+    overflow: auto; /* включаем скроллинг для div */
 }
 
 .main_inf img {
