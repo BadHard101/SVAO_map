@@ -25,9 +25,9 @@ body{
     box-sizing: border-box;
     margin: 0 1em;
     background-color: #536e28;
-    width: 40%;
+    width: 60%;
     display: flex;
-    padding: 1% 2%;
+    padding: 10px;
     justify-content: center;
 
 
