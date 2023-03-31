@@ -33,11 +33,7 @@ function init() {
     let m1_park_sveta = new ymaps.Placemark(park_sveta, {
         iconContent: `<div class="my-custom-icon__text" 
         style="white-space: nowrap; 
-        font-size: 20px; 
-        /*font-family: 'Segoe Print';*/
-        /*font-family: 'Comic Sans MS';*/
-        /*font-family: Bahnschrift;*/
-        /*font-family: Calibri;*/
+        font-size: 21px; 
         font-family: 'MS Reference Sans Serif', serif;
         text-shadow: 1px 0 2px #ffffff, 
         0 1px 2px #ffffff, 

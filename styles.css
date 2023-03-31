@@ -16,7 +16,7 @@ body{
 }
 .map {
     width: 60%;
-    height: 700px;
+    height: 97vh;
     background-color: #333;
 
 
@@ -25,9 +25,7 @@ body{
 
 .box {
     box-sizing: border-box;
-
-    width: 35%;
-    height: 700px;
+    margin: 0 1em;
     background-color: #536e28;
 
     display: flex;
