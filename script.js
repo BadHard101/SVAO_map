@@ -5,6 +5,24 @@ let ba_park = [55.867521, 37.683005];
 let altufevo_estate = [55.908547, 37.584851];
 let lianozovsky_park = [55.900138, 37.565189];
 
+let welcome_field = document.querySelector('#welcome_field');
+let field_park_sveta = document.querySelector('#field_park_sveta');
+let field_ba_park = document.querySelector('#field_ba_park');
+let field_altufevo_estate = document.querySelector('#field_altufevo_estate');
+let field_lianozovsky_park = document.querySelector('#field_lianozovsky_park');
+
+let fields = []
+fields.push(welcome_field);
+fields.push(field_park_sveta);
+fields.push(field_ba_park);
+fields.push(field_altufevo_estate);
+fields.push(field_lianozovsky_park);
+
+function disable_maps_and_descriptions(){
+    for (let i = 0; i < fields.length; i++) {
+        fields[i].style.display = "none";
+    }
+}
 
 function init() {
     let map = new ymaps.Map('map', {
@@ -23,8 +41,6 @@ function init() {
         '<div class="my-custom-icon__content">$[properties.iconContent]</div>' +
         '</div>'
     );*/
-
-    let welcome_field = document.querySelector('#welcome_field');
 
 
     // ПАРК СВЕТА
@@ -49,10 +65,9 @@ function init() {
         //iconContentLayout: MyCustomLayoutClass // Свой макет HTML-элемента
     });
     // Отображаем меню с информацией о точке и меняем карту на более подробную
-    let field_park_sveta = document.querySelector('#field_park_sveta');
     m1_park_sveta.events.add('click', function (e){
+        disable_maps_and_descriptions();
         field_park_sveta.style.display = "flex";
-        welcome_field.style.display = "none";
     })
 
 
@@ -82,9 +97,9 @@ function init() {
         //iconContentLayout: MyCustomLayoutClass // Свой макет HTML-элемента
     });
     // Отображаем меню с информацией о точке и меняем карту на более подробную
-    let menu2 = document.querySelector('#box');
     m2_ba_park.events.add('click', function (e){
-        menu2.style.display = "flex";
+        disable_maps_and_descriptions();
+        field_ba_park.style.display = "flex";
     })
 
 
@@ -115,9 +130,9 @@ function init() {
     });
     // Отображаем меню с информацией о точке
     // и меняем карту на более подробную при нажатии
-    let menu3 = document.querySelector('#box');
     m3_Altufyevo_Estate.events.add('click', function (e){
-        menu3.style.display = "flex";
+        disable_maps_and_descriptions();
+        field_altufevo_estate.style.display = "flex";
     })
 
 
@@ -148,9 +163,9 @@ function init() {
     });
     // Отображаем меню с информацией о точке
     // и меняем карту на более подробную при нажатии
-    let menu4 = document.querySelector('#box');
     m4_lianozovsky_park.events.add('click', function (e){
-        menu4.style.display = "flex";
+        disable_maps_and_descriptions();
+        field_lianozovsky_park.style.display = "flex";
     })
 
 

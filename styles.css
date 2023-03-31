@@ -40,7 +40,7 @@ body{
     align-items: center;
     padding: 0 2%;
 }
-#field_park_sveta {
+#field_park_sveta, #field_altufevo_estate, #field_ba_park, #field_lianozovsky_park {
     display: none;
 }
 
