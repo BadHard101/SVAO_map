@@ -1,4 +1,3 @@
-
 let center = [55.887589, 37.626490];
 let park_sveta = [55.887294, 37.595885];
 let ba_park = [55.867521, 37.683005];
@@ -32,7 +31,7 @@ function init() {
 
     /*let MyCustomLayoutClass = ymaps.templateLayoutFactory.createClass(
         '<div class="my-custom-icon">' +
-        '<div class="my-custom-icon__image" style="background-image: url(imgs/img.png);\n' +
+        '<div class="my-custom-icon__image" style="background-image: url(points_imgs/img.png);\n' +
         '    background-size: contain;\n' +
         '    background-repeat: no-repeat;\n' +
         '    width: 70px;\n' +
@@ -58,7 +57,7 @@ function init() {
         font-weight: bold; ">Парк света</div>`
     }, {
         iconLayout: 'default#imageWithContent',
-        iconImageHref: 'imgs/park_sveta.png',
+        iconImageHref: 'points_imgs/park_sveta.png',
         iconImageSize: [100, 100],
         iconImageOffset: [-50, -60],
         iconContentOffset: [-5, 73], // Смещение HTML-элемента относительно центра иконки
@@ -90,7 +89,7 @@ function init() {
         font-weight: bold; ">Бабушкинский парк</div>`
     }, {
         iconLayout: 'default#imageWithContent',
-        iconImageHref: 'imgs/ba_park.png',
+        iconImageHref: 'points_imgs/ba_park.png',
         iconImageSize: [100, 100],
         iconImageOffset: [-50, -60],
         iconContentOffset: [-40, 73], // Смещение HTML-элемента относительно центра иконки
@@ -122,7 +121,7 @@ function init() {
         font-weight: bold; ">Усадьба Алтуфьево</div>`
     }, {
         iconLayout: 'default#imageWithContent',
-        iconImageHref: 'imgs/altufevo_estate.png',
+        iconImageHref: 'points_imgs/altufevo_estate.png',
         iconImageSize: [100, 100],
         iconImageOffset: [-50, -60],
         iconContentOffset: [-40, 73], // Смещение HTML-элемента относительно центра иконки
@@ -155,7 +154,7 @@ function init() {
         font-weight: bold; ">Лианозовский парк</div>`
     }, {
         iconLayout: 'default#imageWithContent',
-        iconImageHref: 'imgs/lianozovsky_park.png',
+        iconImageHref: 'points_imgs/lianozovsky_park.png',
         iconImageSize: [100, 100],
         iconImageOffset: [-50, -60],
         iconContentOffset: [-40, 73], // Смещение HTML-элемента относительно центра иконки
