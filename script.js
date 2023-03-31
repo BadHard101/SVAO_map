@@ -24,6 +24,8 @@ function init() {
         '</div>'
     );*/
 
+    let welcome_field = document.querySelector('#welcome_field');
+
 
     // ПАРК СВЕТА
     // Создаем метку Парка света
@@ -51,9 +53,10 @@ function init() {
         //iconContentLayout: MyCustomLayoutClass // Свой макет HTML-элемента
     });
     // Отображаем меню с информацией о точке и меняем карту на более подробную
-    let menu1 = document.querySelector('#box');
+    let field_park_sveta = document.querySelector('#field_park_sveta');
     m1_park_sveta.events.add('click', function (e){
-        menu1.style.display = "flex";
+        field_park_sveta.style.display = "flex";
+        welcome_field.style.display = "none";
     })
 
 
