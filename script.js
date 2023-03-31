@@ -7,7 +7,7 @@ let lianozovsky_park = [55.900138, 37.565189];
 
 
 function init() {
-    let map = new ymaps.Map('map-test', {
+    let map = new ymaps.Map('map', {
         center: center,
         zoom: 13
     });
