@@ -25,7 +25,7 @@ body{
     box-sizing: border-box;
     margin: 0 1em;
     background-color: #536e28;
-
+    width: 40%;
     display: flex;
     padding: 1% 2%;
     justify-content: center;
