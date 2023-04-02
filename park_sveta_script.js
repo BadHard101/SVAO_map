@@ -11,7 +11,8 @@ function init() {
 
       park_sveta_Route = new ymaps.multiRouter.MultiRoute({
           referencePoints: [
-              metro_bibirevo, park_sveta_p1, park_sveta_p2, park_sveta_p3, park_sveta_p4, park_sveta_p5, park_sveta_p6
+              metro_bibirevo, park_sveta_p1, park_sveta_p2, park_sveta_p3, park_sveta_p4,
+              park_sveta_p5, park_sveta_p6
           ],
           params: {
               //Тип маршрутизации - пешеходная маршрутизация.
