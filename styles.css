@@ -1,45 +1,65 @@
-body{
+h1, h2, h3, h4, h5, h6, p {
+    margin: 0;
+}
+body {
     margin: 0;
     background-color: #d0f396;
 }
-.wrapper{
+.wrapper {
     padding: 10px;
     display: flex;
     justify-content: space-around;
 
 }
-.wrapper div{
+.wrapper div {
     border-radius: 20px;
 }
 .map {
-    width: 60%;
-    height: 700px;
-    background-color: #333;
-
-
+    width: 100%;
+    height: 97vh;
 }
-#box {
-    box-sizing: border-box;
-
-    width: 35%;
-    height: 700px;
-    background-color: #536e28;
-
+#map_main {
     display: flex;
-    padding: 1% 2%;
+}
+#map_park_sveta {
+    display: none;
+}
+#map_lianozovsky_park {
+    display: none;
+}
+#map_altufevo_estate {
+    display: none;
+}
+#map_ba_park {
+    display: none;
+}
+
+
+.box {
+    box-sizing: border-box;
+    margin: 0 1em;
+    background-color: #536e28;
+    width: 60%;
+    display: flex;
+    padding: 10px;
     justify-content: center;
 
 
-    font-family: Arial;
+    font-family: 'MS Reference Sans Serif', serif;
 }
-.welcome_field{
+.field {
     width: 100%;
+    height: 95vh;
     display: flex;
     flex-direction: column;
     align-items: center;
     padding: 0 2%;
 }
-.page_title{
+#field_park_sveta, #field_altufevo_estate, #field_ba_park, #field_lianozovsky_park {
+    display: none;
+}
+
+.page_title {
     width: 100%;
     margin-bottom: 0.5em;
     text-align: center;
@@ -51,13 +71,31 @@ body{
 
 }
 
-.main_inf{
+.main_inf {
     width: 100%;
     height: 100%;
     background-color: #90a870;
     text-align: justify-all;
     padding: 2%;
     color: white;
+
+    overflow: auto; /* включаем скроллинг для div */
+}
+
+.main_inf img {
+    display: block;
+    margin: 1em auto;
+    width: 100%;
+}
+
+.short_inf {
+    width: 100%;
+    background-color: #a3b26f;
+    text-align: justify-all;
+    padding: 2%;
+    color: white;
+
+    margin-bottom: 1em;
 }
 
 

@@ -1,29 +1,49 @@
-
 let center = [55.887589, 37.626490];
 let park_sveta = [55.887294, 37.595885];
 let ba_park = [55.867521, 37.683005];
 let altufevo_estate = [55.908547, 37.584851];
 let lianozovsky_park = [55.900138, 37.565189];
 
+let field_welcome = document.querySelector('#welcome_field');
+let field_park_sveta = document.querySelector('#field_park_sveta');
+let field_ba_park = document.querySelector('#field_ba_park');
+let field_altufevo_estate = document.querySelector('#field_altufevo_estate');
+let field_lianozovsky_park = document.querySelector('#field_lianozovsky_park');
+
+let fields = []
+fields.push(field_welcome);
+fields.push(field_park_sveta);
+fields.push(field_ba_park);
+fields.push(field_altufevo_estate);
+fields.push(field_lianozovsky_park);
+
+let map_main = document.querySelector('#map_main')
+let map_park_sveta = document.querySelector('#map_park_sveta')
+let map_lianozovsky_park = document.querySelector('#map_lianozovsky_park')
+let map_altufevo_estate = document.querySelector('#map_altufevo_estate')
+let map_ba_park = document.querySelector('#map_ba_park')
+
+let maps = []
+maps.push(map_main);
+maps.push(map_park_sveta);
+maps.push(map_lianozovsky_park);
+maps.push(map_altufevo_estate);
+maps.push(map_ba_park);
+
+function disable_maps_and_descriptions(){
+    for (let i = 0; i < fields.length; i++) {
+        fields[i].style.display = "none";
+    }
+    for (let i = 0; i < maps.length; i++) {
+        maps[i].style.display = "none";
+    }
+}
 
 function init() {
-    let map = new ymaps.Map('map', {
+    let main_map = new ymaps.Map('map_main', {
         center: center,
         zoom: 13
     });
-
-    /*let MyCustomLayoutClass = ymaps.templateLayoutFactory.createClass(
-        '<div class="my-custom-icon">' +
-        '<div class="my-custom-icon__image" style="background-image: url(imgs/img.png);\n' +
-        '    background-size: contain;\n' +
-        '    background-repeat: no-repeat;\n' +
-        '    width: 70px;\n' +
-        '    height: 70px;\n' +
-        '    border-radius: 50%; /!* Задаем радиус скругления равным половине ширины и высоты элемента *!/"></div>' +
-        '<div class="my-custom-icon__content">$[properties.iconContent]</div>' +
-        '</div>'
-    );*/
-
 
     // ПАРК СВЕТА
     // Создаем метку Парка света
@@ -31,11 +51,7 @@ function init() {
     let m1_park_sveta = new ymaps.Placemark(park_sveta, {
         iconContent: `<div class="my-custom-icon__text" 
         style="white-space: nowrap; 
-        font-size: 20px; 
-        /*font-family: 'Segoe Print';*/
-        /*font-family: 'Comic Sans MS';*/
-        /*font-family: Bahnschrift;*/
-        /*font-family: Calibri;*/
+        font-size: 21px; 
         font-family: 'MS Reference Sans Serif', serif;
         text-shadow: 1px 0 2px #ffffff, 
         0 1px 2px #ffffff, 
@@ -44,16 +60,17 @@ function init() {
         font-weight: bold; ">Парк света</div>`
     }, {
         iconLayout: 'default#imageWithContent',
-        iconImageHref: 'imgs/park_sveta.png',
+        iconImageHref: 'points_imgs/park_sveta.png',
         iconImageSize: [100, 100],
         iconImageOffset: [-50, -60],
         iconContentOffset: [-5, 73], // Смещение HTML-элемента относительно центра иконки
         //iconContentLayout: MyCustomLayoutClass // Свой макет HTML-элемента
     });
     // Отображаем меню с информацией о точке и меняем карту на более подробную
-    let menu1 = document.querySelector('#box');
     m1_park_sveta.events.add('click', function (e){
-        menu1.style.display = "flex";
+        disable_maps_and_descriptions();
+        field_park_sveta.style.display = "flex";
+        map_park_sveta.style.display = "flex";
     })
 
 
@@ -76,16 +93,17 @@ function init() {
         font-weight: bold; ">Бабушкинский парк</div>`
     }, {
         iconLayout: 'default#imageWithContent',
-        iconImageHref: 'imgs/ba_park.png',
+        iconImageHref: 'points_imgs/ba_park.png',
         iconImageSize: [100, 100],
         iconImageOffset: [-50, -60],
         iconContentOffset: [-40, 73], // Смещение HTML-элемента относительно центра иконки
         //iconContentLayout: MyCustomLayoutClass // Свой макет HTML-элемента
     });
     // Отображаем меню с информацией о точке и меняем карту на более подробную
-    let menu2 = document.querySelector('#box');
     m2_ba_park.events.add('click', function (e){
-        menu2.style.display = "flex";
+        disable_maps_and_descriptions();
+        field_ba_park.style.display = "flex";
+        map_park_sveta.style.display = "flex";
     })
 
 
@@ -108,7 +126,7 @@ function init() {
         font-weight: bold; ">Усадьба Алтуфьево</div>`
     }, {
         iconLayout: 'default#imageWithContent',
-        iconImageHref: 'imgs/altufevo_estate.png',
+        iconImageHref: 'points_imgs/altufevo_estate.png',
         iconImageSize: [100, 100],
         iconImageOffset: [-50, -60],
         iconContentOffset: [-40, 73], // Смещение HTML-элемента относительно центра иконки
@@ -116,9 +134,10 @@ function init() {
     });
     // Отображаем меню с информацией о точке
     // и меняем карту на более подробную при нажатии
-    let menu3 = document.querySelector('#box');
     m3_Altufyevo_Estate.events.add('click', function (e){
-        menu3.style.display = "flex";
+        disable_maps_and_descriptions();
+        field_altufevo_estate.style.display = "flex";
+        map_park_sveta.style.display = "flex";
     })
 
 
@@ -141,7 +160,7 @@ function init() {
         font-weight: bold; ">Лианозовский парк</div>`
     }, {
         iconLayout: 'default#imageWithContent',
-        iconImageHref: 'imgs/lianozovsky_park.png',
+        iconImageHref: 'points_imgs/lianozovsky_park.png',
         iconImageSize: [100, 100],
         iconImageOffset: [-50, -60],
         iconContentOffset: [-40, 73], // Смещение HTML-элемента относительно центра иконки
@@ -149,28 +168,29 @@ function init() {
     });
     // Отображаем меню с информацией о точке
     // и меняем карту на более подробную при нажатии
-    let menu4 = document.querySelector('#box');
     m4_lianozovsky_park.events.add('click', function (e){
-        menu4.style.display = "flex";
+        disable_maps_and_descriptions();
+        field_lianozovsky_park.style.display = "flex";
+        map_park_sveta.style.display = "flex";
     })
 
 
 
     // Добавляем все созданные метки на карту
-    map.geoObjects.add(m1_park_sveta);
-    map.geoObjects.add(m2_ba_park);
-    map.geoObjects.add(m3_Altufyevo_Estate);
-    map.geoObjects.add(m4_lianozovsky_park);
+    main_map.geoObjects.add(m1_park_sveta);
+    main_map.geoObjects.add(m2_ba_park);
+    main_map.geoObjects.add(m3_Altufyevo_Estate);
+    main_map.geoObjects.add(m4_lianozovsky_park);
 
 
 
-    map.controls.remove('geolocationControl'); // удаляем геолокацию
-    map.controls.remove('searchControl'); // удаляем поиск
-    map.controls.remove('trafficControl'); // удаляем контроль трафика
-    map.controls.remove('typeSelector'); // удаляем тип
-    map.controls.remove('fullscreenControl'); // удаляем кнопку перехода в полноэкранный режим
-    map.controls.remove('zoomControl'); // удаляем контрол зуммирования
-    map.controls.remove('rulerControl'); // удаляем контрол правил
+    main_map.controls.remove('geolocationControl'); // удаляем геолокацию
+    main_map.controls.remove('searchControl'); // удаляем поиск
+    main_map.controls.remove('trafficControl'); // удаляем контроль трафика
+    main_map.controls.remove('typeSelector'); // удаляем тип
+    main_map.controls.remove('fullscreenControl'); // удаляем кнопку перехода в полноэкранный режим
+    main_map.controls.remove('zoomControl'); // удаляем контрол зуммирования
+    main_map.controls.remove('rulerControl'); // удаляем контрол правил
     // map.behaviors.disable(['scrollZoom']); // отключаем скролл карты (опционально)
 }
 
