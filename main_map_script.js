@@ -171,7 +171,7 @@ function init() {
     m4_lianozovsky_park.events.add('click', function (e){
         disable_maps_and_descriptions();
         field_lianozovsky_park.style.display = "flex";
-        map_park_sveta.style.display = "flex";
+        map_lianozovsky_park.style.display = "flex";
     })
 
 
