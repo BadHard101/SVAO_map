@@ -3,7 +3,7 @@ h1, h2, h3, h4, h5, h6, p {
 }
 body {
     margin: 0;
-    background-color: #d0f396;
+    background-color: #c7efa9;
 }
 .wrapper {
     padding: 10px;
@@ -34,11 +34,11 @@ body {
     display: none;
 }
 
-
+/* #6da34d #7fc97f #92c93d #a8c545 #4f9d58 */
 .box {
     box-sizing: border-box;
     margin: 0 1em;
-    background-color: #536e28;
+    background-color: #458f4d;
     width: 60%;
     display: flex;
     padding: 10px;
@@ -67,14 +67,14 @@ body {
 
     font-size: 2em;
     color:white;
-    background-color: #2f5917;
+    background-color: #376b1a;
 
 }
 
 .main_inf {
     width: 100%;
     height: 100%;
-    background-color: #90a870;
+    background-color: #80ab67;
     text-align: justify-all;
     padding: 2%;
     color: white;
@@ -90,7 +90,7 @@ body {
 
 .short_inf {
     width: 100%;
-    background-color: #a3b26f;
+    background-color: #a1bd42;
     text-align: justify-all;
     padding: 2%;
     color: white;
