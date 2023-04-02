@@ -19,6 +19,21 @@ body {
     height: 97vh;
     background-color: #333;
 }
+#map_main {
+    display: flex;
+}
+#map_park_sveta {
+    display: none;
+}
+#map_lianozovsky_park {
+    display: none;
+}
+#map_altufevo_estate {
+    display: none;
+}
+#map_ba_park {
+    display: none;
+}
 
 
 .box {
