@@ -137,7 +137,7 @@ function init() {
     m3_Altufyevo_Estate.events.add('click', function (e){
         disable_maps_and_descriptions();
         field_altufevo_estate.style.display = "flex";
-        map_park_sveta.style.display = "flex";
+        map_altufevo_estate.style.display = "flex";
     })
 
 

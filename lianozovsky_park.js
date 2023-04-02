@@ -1,5 +1,5 @@
 let center_lianozovsky_park = [55.894014, 37.572762]
-let metro_altufievo = 'Москва, метро Алтуфьево, выход первый'
+let metro_altufievo_1 = 'Москва, метро Алтуфьево, выход первый'
 let lianozovsky_park_p1 =[55.900202, 37.571333]
 let lianozovsky_park_p2 =[55.900988, 37.564658]
 let lianozovsky_park_p3 =[55.899022, 37.559272]
@@ -13,7 +13,7 @@ function init() {
 
     lianozovsky_park_Route = new ymaps.multiRouter.MultiRoute({
         referencePoints: [
-            metro_altufievo, lianozovsky_park_p1, lianozovsky_park_p2, lianozovsky_park_p3, lianozovsky_park_p4,
+            metro_altufievo_1, lianozovsky_park_p1, lianozovsky_park_p2, lianozovsky_park_p3, lianozovsky_park_p4,
             lianozovsky_park_p5, lianozovsky_park_p6, lianozovsky_park_p7, lianozovsky_park_p8
         ],
         params: {
