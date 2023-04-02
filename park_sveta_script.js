@@ -48,7 +48,7 @@ function init() {
       park_sveta_map.controls.remove('fullscreenControl'); // удаляем кнопку перехода в полноэкранный режим
       park_sveta_map.controls.remove('zoomControl'); // удаляем контрол зуммирования
       park_sveta_map.controls.remove('rulerControl'); // удаляем контрол правил
-      park_sveta_map.behaviors.disable(['scrollZoom']); // отключаем скролл карты (опционально)
+      //park_sveta_map.behaviors.disable(['scrollZoom']); // отключаем скролл карты (опционально)
 }
 
 ymaps.ready(init);
