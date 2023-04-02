@@ -4,43 +4,46 @@ let ba_park = [55.867521, 37.683005];
 let altufevo_estate = [55.908547, 37.584851];
 let lianozovsky_park = [55.900138, 37.565189];
 
-let welcome_field = document.querySelector('#welcome_field');
+let field_welcome = document.querySelector('#welcome_field');
 let field_park_sveta = document.querySelector('#field_park_sveta');
 let field_ba_park = document.querySelector('#field_ba_park');
 let field_altufevo_estate = document.querySelector('#field_altufevo_estate');
 let field_lianozovsky_park = document.querySelector('#field_lianozovsky_park');
 
 let fields = []
-fields.push(welcome_field);
+fields.push(field_welcome);
 fields.push(field_park_sveta);
 fields.push(field_ba_park);
 fields.push(field_altufevo_estate);
 fields.push(field_lianozovsky_park);
 
+let map_main = document.querySelector('#map_main')
+let map_park_sveta = document.querySelector('#map_park_sveta')
+let map_lianozovsky_park = document.querySelector('#map_lianozovsky_park')
+let map_altufevo_estate = document.querySelector('#map_altufevo_estate')
+let map_ba_park = document.querySelector('#map_ba_park')
+
+let maps = []
+maps.push(map_main);
+maps.push(map_park_sveta);
+maps.push(map_lianozovsky_park);
+maps.push(map_altufevo_estate);
+maps.push(map_ba_park);
+
 function disable_maps_and_descriptions(){
     for (let i = 0; i < fields.length; i++) {
         fields[i].style.display = "none";
     }
+    for (let i = 0; i < maps.length; i++) {
+        maps[i].style.display = "none";
+    }
 }
 
 function init() {
-    let map = new ymaps.Map('map', {
+    let main_map = new ymaps.Map('map_main', {
         center: center,
         zoom: 13
     });
-
-    /*let MyCustomLayoutClass = ymaps.templateLayoutFactory.createClass(
-        '<div class="my-custom-icon">' +
-        '<div class="my-custom-icon__image" style="background-image: url(points_imgs/img.png);\n' +
-        '    background-size: contain;\n' +
-        '    background-repeat: no-repeat;\n' +
-        '    width: 70px;\n' +
-        '    height: 70px;\n' +
-        '    border-radius: 50%; /!* Задаем радиус скругления равным половине ширины и высоты элемента *!/"></div>' +
-        '<div class="my-custom-icon__content">$[properties.iconContent]</div>' +
-        '</div>'
-    );*/
-
 
     // ПАРК СВЕТА
     // Создаем метку Парка света
@@ -67,6 +70,7 @@ function init() {
     m1_park_sveta.events.add('click', function (e){
         disable_maps_and_descriptions();
         field_park_sveta.style.display = "flex";
+        map_park_sveta.style.display = "flex";
     })
 
 
@@ -170,20 +174,20 @@ function init() {
 
 
     // Добавляем все созданные метки на карту
-    map.geoObjects.add(m1_park_sveta);
-    map.geoObjects.add(m2_ba_park);
-    map.geoObjects.add(m3_Altufyevo_Estate);
-    map.geoObjects.add(m4_lianozovsky_park);
+    main_map.geoObjects.add(m1_park_sveta);
+    main_map.geoObjects.add(m2_ba_park);
+    main_map.geoObjects.add(m3_Altufyevo_Estate);
+    main_map.geoObjects.add(m4_lianozovsky_park);
 
 
 
-    map.controls.remove('geolocationControl'); // удаляем геолокацию
-    map.controls.remove('searchControl'); // удаляем поиск
-    map.controls.remove('trafficControl'); // удаляем контроль трафика
-    map.controls.remove('typeSelector'); // удаляем тип
-    map.controls.remove('fullscreenControl'); // удаляем кнопку перехода в полноэкранный режим
-    map.controls.remove('zoomControl'); // удаляем контрол зуммирования
-    map.controls.remove('rulerControl'); // удаляем контрол правил
+    main_map.controls.remove('geolocationControl'); // удаляем геолокацию
+    main_map.controls.remove('searchControl'); // удаляем поиск
+    main_map.controls.remove('trafficControl'); // удаляем контроль трафика
+    main_map.controls.remove('typeSelector'); // удаляем тип
+    main_map.controls.remove('fullscreenControl'); // удаляем кнопку перехода в полноэкранный режим
+    main_map.controls.remove('zoomControl'); // удаляем контрол зуммирования
+    main_map.controls.remove('rulerControl'); // удаляем контрол правил
     // map.behaviors.disable(['scrollZoom']); // отключаем скролл карты (опционально)
 }
 
