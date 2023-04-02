@@ -103,7 +103,7 @@ function init() {
     m2_ba_park.events.add('click', function (e){
         disable_maps_and_descriptions();
         field_ba_park.style.display = "flex";
-        map_park_sveta.style.display = "flex";
+        map_ba_park.style.display = "flex";
     })
 
 
@@ -137,7 +137,7 @@ function init() {
     m3_Altufyevo_Estate.events.add('click', function (e){
         disable_maps_and_descriptions();
         field_altufevo_estate.style.display = "flex";
-        map_park_sveta.style.display = "flex";
+        map_altufevo_estate.style.display = "flex";
     })
 
 
@@ -171,7 +171,7 @@ function init() {
     m4_lianozovsky_park.events.add('click', function (e){
         disable_maps_and_descriptions();
         field_lianozovsky_park.style.display = "flex";
-        map_park_sveta.style.display = "flex";
+        map_lianozovsky_park.style.display = "flex";
     })
 
 
