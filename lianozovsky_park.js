@@ -1,5 +1,5 @@
-let center_park_sveta = [55.886112, 37.598256]
-let metro_bibirevo = 'Москва, метро Бибирево, выход второй'
+let center_lianozovsky_park = [55.886112, 37.598256]
+let metro_bibire = 'Москва, метро Бибирево, выход второй'
 let point_1 =[55.886613, 37.598626]
 let point_2 =[55.886726, 37.598223]
 let point_3 =[55.887562, 37.595580]
@@ -7,7 +7,7 @@ let point_3 =[55.887562, 37.595580]
 
 function init() {
 
-    lianozovsky_parkRoute = new ymaps.multiRouter.MultiRoute({
+    lianozovsky_park_route = new ymaps.multiRouter.MultiRoute({
         referencePoints: [
             metro_bibirevo, point_1, point_2, point_3
         ],
@@ -40,7 +40,7 @@ function init() {
         zoom: 17
     });
 
-    lianozovsky_park_map.geoObjects.add(lianozovsky_parkRoute);
+    lianozovsky_park_map.geoObjects.add(lianozovsky_park_route);
 
 
 

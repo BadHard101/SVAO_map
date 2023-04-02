@@ -103,7 +103,7 @@ function init() {
     m2_ba_park.events.add('click', function (e){
         disable_maps_and_descriptions();
         field_ba_park.style.display = "flex";
-        map_park_sveta.style.display = "flex";
+        map_ba_park.style.display = "flex";
     })
 
 
