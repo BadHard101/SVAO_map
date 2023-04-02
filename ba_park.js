@@ -1,4 +1,4 @@
-let center_ba_park = [55.868013, 37.673650]
+center_ba_park = [55.868013, 37.673650]
 let metro_babushkinskaya = 'Москва, метро Бабушкинская, выход четвертый'
 let ba_park_p1 =[55.867387, 37.676151]
 let ba_park_p2 =[55.866239, 37.681885]
@@ -32,7 +32,7 @@ function init() {
     });
 
 
-    let ba_park_map = new ymaps.Map('map_ba_park', {
+    ba_park_map = new ymaps.Map('map_ba_park', {
         center: center_ba_park,
         zoom: 16
     });

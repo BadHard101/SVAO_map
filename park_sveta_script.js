@@ -1,4 +1,4 @@
-let center_park_sveta = [55.886112, 37.598256]
+center_park_sveta = [55.886112, 37.598256]
 let metro_bibirevo = 'Москва, метро Бибирево, выход второй'
 let park_sveta_p1 =[55.886613, 37.598626]
 let park_sveta_p2 =[55.886726, 37.598223]
@@ -35,7 +35,7 @@ function init() {
       });
 
 
-      let park_sveta_map = new ymaps.Map('map_park_sveta', {
+      park_sveta_map = new ymaps.Map('map_park_sveta', {
           center: center_park_sveta,
           zoom: 17
       });

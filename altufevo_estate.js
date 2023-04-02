@@ -1,4 +1,4 @@
-let center_altufevo_estate = [55.903763, 37.592627]
+center_altufevo_estate = [55.903763, 37.592627]
 let metro_altufievo_4 = 'Москва, метро Алтуфьево, выход четвертый'
 let altufevo_estate_p1 =[55.900913, 37.598668]
 let altufevo_estate_p2 =[55.899777, 37.606408]
@@ -36,7 +36,7 @@ function init() {
     });
 
 
-    let altufevo_estate_map = new ymaps.Map('map_altufevo_estate', {
+    altufevo_estate_map = new ymaps.Map('map_altufevo_estate', {
         center: center_altufevo_estate,
         zoom: 15
     });

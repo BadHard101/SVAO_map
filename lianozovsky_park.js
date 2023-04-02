@@ -1,4 +1,4 @@
-let center_lianozovsky_park = [55.894014, 37.572762]
+center_lianozovsky_park = [55.894014, 37.572762]
 let metro_altufievo_1 = 'Москва, метро Алтуфьево, выход первый'
 let lianozovsky_park_p1 =[55.900202, 37.571333]
 let lianozovsky_park_p2 =[55.900988, 37.564658]
@@ -37,7 +37,7 @@ function init() {
     });
 
 
-    let lianozovsky_park_map = new ymaps.Map('map_lianozovsky_park', {
+    lianozovsky_park_map = new ymaps.Map('map_lianozovsky_park', {
         center: center_lianozovsky_park,
         zoom: 15
     });

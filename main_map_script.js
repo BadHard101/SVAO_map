@@ -40,7 +40,7 @@ function disable_maps_and_descriptions(){
 }
 
 function init() {
-    let main_map = new ymaps.Map('map_main', {
+    main_map = new ymaps.Map('map_main', {
         center: center,
         zoom: 13
     });
@@ -195,3 +195,23 @@ function init() {
 }
 
 ymaps.ready(init);
+
+
+const backButtonList = document.querySelectorAll('.back_button');
+backButtonList.forEach(function(backButton) {
+    backButton.addEventListener('click', function(e) {
+        for (let i = 0; i < fields.length; i++) {
+            fields[i].style.display = "none";
+        }
+        for (let i = 0; i < maps.length; i++) {
+            maps[i].style.display = "none";
+        }
+        main_map.setCenter(center, 13);
+        park_sveta_map.setCenter(center_park_sveta, 17);
+        ba_park_map.setCenter(center_ba_park, 16);
+        lianozovsky_park_map.setCenter(center_lianozovsky_park, 15);
+        altufevo_estate_map.setCenter(center_altufevo_estate, 15);
+        map_main.style.display = "flex";
+        field_welcome.style.display = "flex";
+    });
+});
