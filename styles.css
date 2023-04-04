@@ -49,7 +49,7 @@ body {
 }
 .field {
     width: 100%;
-    height: 95vh;
+    height: 93vh;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -110,6 +110,19 @@ body {
     color: white;
 
     margin-bottom: 1em;
+}
+
+@media (max-width:1300px)  {
+    .wrapper {
+        flex-direction: column;
+    }
+    .map {
+        height: 60vh;
+    }
+    .box {
+        margin-top: 1em;
+        width: 95%;
+    }
 }
 
 
