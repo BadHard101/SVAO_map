@@ -179,8 +179,8 @@ function init() {
     // Добавляем все созданные метки на карту
     main_map.geoObjects.add(m1_park_sveta);
     main_map.geoObjects.add(m2_ba_park);
-    main_map.geoObjects.add(m3_Altufyevo_Estate);
     main_map.geoObjects.add(m4_lianozovsky_park);
+    main_map.geoObjects.add(m3_Altufyevo_Estate);
 
 
 
