@@ -33,6 +33,9 @@ body {
 #map_ba_park {
     display: none;
 }
+#map_sviblovo {
+    display: none;
+}
 
 /* #6da34d #7fc97f #92c93d #a8c545 #4f9d58 */
 .box {
@@ -55,7 +58,11 @@ body {
     align-items: center;
     padding: 0 2%;
 }
-#field_park_sveta, #field_altufevo_estate, #field_ba_park, #field_lianozovsky_park {
+#field_park_sveta,
+#field_altufevo_estate,
+#field_ba_park,
+#field_lianozovsky_park,
+#field_sviblovo {
     display: none;
 }
 
