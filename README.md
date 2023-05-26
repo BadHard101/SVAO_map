@@ -1,2 +1,2 @@
 # SVAO_map
-![Alt текст](other_images/AOs_moskva.png)
+![Alt текст](other_imgs/AOs_moskva.png)
